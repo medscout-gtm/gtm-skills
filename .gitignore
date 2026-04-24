@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.#*
+\#*\#
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Local scratch
+scratch/
+.scratch/
+*.local.md
