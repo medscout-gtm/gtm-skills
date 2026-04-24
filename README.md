@@ -1,32 +1,54 @@
 # GTM Skills
 
-Distributable Claude Code skills for B2B GTM work, built by the MedScout GTM team. v1 ships three skills designed to work together, though each is useful on its own.
+Distributable Claude Code skills for B2B GTM work, built by the MedScout GTM team.
 
 ## What's in here
 
-| Skill | What it does | When to reach for it |
-|---|---|---|
-| **Target Account Playbook** | Staged facilitation that builds an account qualification framework — attributes that matter, signals that help assess them, and where signals become findable across your sales process. | You want a clear, shared rubric for "is this account worth pursuing?" — backed by real customer examples, not just hypotheses. |
-| **Interview Me** | Conversational thought partner that turns fuzzy thinking (voice-to-text brain dumps, half-formed ideas) into sharp articulation. | You have something half-formed you need to think through out loud. |
-| **Crystallization** | The core methodology behind Interview Me — synthesis + friction cycles that sharpen thinking into documented clarity. | You already know what you mean but can't quite say it; or you have a rough artifact that needs sharpening. |
+### General-purpose sharpening tools
+
+| Skill | What it does |
+|---|---|
+| **Interview Me** | Conversational thought partner that turns fuzzy thinking into sharp articulation. Voice-to-text brain dumps, half-formed ideas, implicit knowledge that hasn't been written down yet. |
+| **Crystallization** | Synthesis + friction cycles that sharpen rough thinking into documented clarity. The methodology behind Interview Me — also useful on its own for tightening an existing draft. |
+
+These are core parts of MedScout's internal systems, ported out. We reach for them anytime we need to sharpen our thinking — regardless of domain. Future skill packs will build on these same tools.
+
+### Domain-specific
+
+| Skill | What it does |
+|---|---|
+| **Target Account Playbook** | Takes your account qualification context and produces reusable playbook assets for ABX workflows — qualification rubric, signal maps, assessment timing. |
 
 ## How they fit together
 
 ```mermaid
-flowchart LR
-    TAP[Target Account Playbook]
-    IM[Interview Me]
-    CX[Crystallization]
+flowchart TD
+    subgraph gp["General-Purpose Sharpening Tools"]
+        IM["Interview Me"]
+        CX["Crystallization"]
+    end
 
-    TAP -- "loads per stage" --> IM
-    IM -- "loads silently" --> CX
+    TAP["Target Account Playbook"]
 
-    TAP -.->|"works standalone"| USER1((User))
-    IM -.->|"works standalone"| USER2((User))
-    CX -.->|"works standalone"| USER3((User))
+    subgraph modes["How you use them together"]
+        S["Simplest: bring your context → V1 playbook"]
+        ST["Starter: interview → build context → playbook"]
+        L["Living: new info → sharpen → update playbook"]
+    end
+
+    gp -->|"develop context if you don't have it"| TAP
+    TAP --> modes
 ```
 
-Target Account Playbook is the hub — it's the one most users trigger. Under the hood, it loads Interview Me at each stage to run the conversation, and Interview Me loads Crystallization as its thinking methodology. Each skill is also usable on its own: Interview Me for any clarification workflow, Crystallization for sharpening an existing draft.
+The Target Account Playbook takes your account qualification context — whatever you have documented about who you sell to, what makes a good fit, and how your team qualifies — and produces reusable playbook assets (rubric, signal maps, assessment timing).
+
+The question is: what if you don't have that context written down? That's what Interview Me and Crystallization are for. They help draw out the implicit knowledge your team already has but hasn't documented.
+
+**Three ways to use this, depending on where you are:**
+
+- **Simplest** — You already have context docs (positioning, ICP notes, prior qualification work). Feed them in, work with Claude, get your V1 playbook elements.
+- **Starter** — You don't have much written down. Go through the three interview stages to develop your context assets first, then generate the playbook from those.
+- **Living** — Your playbook is never final. When you learn something new — a deal surprises you, your market shifts, a rep surfaces a pattern — kick off a crystallization or interview session, then update your playbook assets with what you found.
 
 ## What the Playbook produces
 
@@ -42,9 +64,7 @@ The output is meant to be used — by reps, by marketing, by ops — not filed a
 
 **Most qualification frameworks live in someone's head.** The best reps and leaders have a sharp instinct for "good account" vs. "not a good account," but the reasoning is implicit — never written down, never shared, never pressure-tested against real data.
 
-This skill package is designed to pull that implicit knowledge out through conversation, test it against real customers, and turn it into something a team can actually use. The output is better than a generic framework because it's grounded in your company's specific examples — and better than a working doc because the process forces you to surface assumptions you didn't know you were making.
-
-Interview Me and Crystallization are the engine. They're skilled at one thing: making fuzzy thinking precise, without putting words in your mouth.
+This skill package pulls that implicit knowledge out through conversation, tests it against real customers, and turns it into something a team can use. The output is better than a generic framework because it's grounded in your company's specific examples — and better than a working doc because the process forces you to surface assumptions you didn't know you were making.
 
 ## Web research
 
