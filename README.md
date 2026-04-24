@@ -50,6 +50,30 @@ Interview Me and Crystallization are the engine. They're skilled at one thing: m
 
 The Target Account Playbook gets meaningfully richer when Claude can look up companies you're discussing during Stage 2 fit analysis — it can fill in context beyond what you recall in the moment. Web search is available on all Claude.ai plans (including Team and Enterprise), so this is usually on by default. If your organization has disabled web access, the skill still works — it just relies more heavily on what you bring to the conversation.
 
+## Before you start
+
+The Target Account Playbook moves faster and produces a sharper framework when you have a few things ready. None are required — the skill adapts to what you bring — but gathering these up front avoids interruptions mid-session.
+
+- **Your current ICP thinking, if any.** A positioning doc, a qualification rubric, notes from a prior exercise. Even a rough one-pager helps. If you don't have anything written, that's fine — the first stage is designed to draw it out through conversation.
+- **A shortlist of 3–6 real customers you can talk about.** Ideally a mix: two or three best-fit customers (long-tenured, expanded, strong use case) and two or three poor-fit customers (churned, never got traction, surprise losses). Named accounts you know well — not just logos.
+- **Optional but recommended: a rep transcript for Stage 3.** A voice recording of your best rep narrating how they qualify a couple of fresh accounts, thinking out loud. Skip if you don't have it yet — the skill will tell you how to set one up and you can come back to this stage later.
+- **Voice-to-text ready.** The interview mechanics assume brain-dump-style input. Typing works, but talking is faster and usually richer.
+
+## What to expect
+
+A full run through all three stages plus framework generation is roughly 90 minutes to 2 hours, spread across one sitting or multiple sessions. Rough shape:
+
+| Stage | What happens | Typical time |
+|---|---|---|
+| **Stage 1 — Company context** | You describe what you sell, who to, and your current thinking on fit. Short discovery. | 15–30 min |
+| **Stage 2 — Fit analysis** | Iterative rounds walking through good-fit and poor-fit customers. The longest stage — where most of the sharpening happens. | 45–75 min |
+| **Stage 3 — Rep walkthrough** (optional) | Upload the rep transcript; Claude unpacks it with you. Usually the shortest stage. | 15–30 min |
+| **Framework generation** | Claude produces your qualification framework — attributes, signals, assessment timing. You react and refine. | 15–30 min |
+
+The skill transitions you between stages — you don't need to track where you are. At any point you can stop, save the output, and resume later.
+
+**What you'll end up with**: one qualification framework document you can share with your team, plus the session journey behind it (useful context for the framework, and handy when you revisit later).
+
 ## Install
 
 See [INSTALL.md](INSTALL.md). TL;DR: clone this repo, symlink the three skill directories into `~/.claude/skills/`, and Claude Code auto-discovers them.
