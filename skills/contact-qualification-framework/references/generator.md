@@ -114,6 +114,10 @@ If you find yourself asking more than two or three questions before you can star
 
 ## Output Document Structure
 
+This is the default structure. Present it to the user as a starting point — if they want to rearrange, combine sections, or organize differently, adapt. The structure serves the content, not the other way around.
+
+If the interview surfaced segmentation needs (different criteria for SMB vs. enterprise, different verticals, etc.), the framework should adapt. Start with the base that applies everywhere, then describe what changes per segment — which attributes shift, which thresholds move, which new signals appear. Don't duplicate the whole framework for each segment; describe the base and the deltas.
+
 ### 1. Context and framing
 
 What the profile reviews revealed — the patterns and reasoning that drive the framework. How the user thinks about contact qualification. How to use this document. Written in the user's voice and language.
@@ -126,17 +130,39 @@ The job functions that matter, how to identify them, and where titles mislead. T
 
 If the user only cares about one function (e.g., they only sell to sales leaders), this section might be brief — just the signals that distinguish their target function from adjacent ones. If they care about multiple functions, each gets its own entry with classification guidance.
 
+Present persona classification as a table — one row per category:
+
+| Category | Description | Example Titles |
+|----------|-------------|----------------|
+| Sales Leadership | Owns the revenue number and sales strategy; manages reps or the full function | VP of Sales, Head of Sales, CRO, Director of Sales (at companies < 200) |
+| ... | ... | ... |
+
+Follow the table with classification guidance for ambiguous cases — the signals that distinguish one category from another when the title doesn't make it obvious, and where titles mislead.
+
 ### 3. Fit assessment
 
 The holistic attributes that determine fit tier, applied universally across all personas. Classification tells you what someone does; fit assessment tells you whether they're relevant to the sales process — and that question is the same regardless of function. The job function from classification is an input to the fit judgment (a "Director of Sales" who owns the function is assessed differently than a "Territory Manager"), but the assessment criteria themselves don't change per persona.
 
-Each attribute covers: what to look for, why it matters, what good looks like, what's concerning, and how critical it is (elephant vs. ant).
+Present each attribute as a row in a table, organized by what the attribute tells you about the contact:
 
-Order attributes by criticality — lead with the elephants that most strongly drive the tier decision.
+| Attribute | Source | Why It Matters | Good | Concerning | Elephant / Ant |
+|-----------|--------|----------------|------|------------|----------------|
+| Function ownership | LinkedIn experience, About section | Distinguishes someone who owns the function from someone executing within it | "Built the team from 3 to 12"; "own the full revenue number" | "Support the sales organization"; no team references in a senior title | Elephant |
+| ... | ... | ... | ... | ... | ... |
+
+Order attributes by criticality — lead with the elephants that most strongly drive the tier decision. An elephant is a non-negotiable that changes the decision on its own. An ant is a green flag if true but not a deal-breaker if not.
+
+After the table, include the tier definitions that map attributes to action (Best Fit, Good Fit, Unsure / Needs Review, Poor Fit).
 
 If there are segmentation variants, describe the base criteria first, then the deltas per segment.
 
-### 4. Open questions
+### 4. Watch-outs
+
+Gotchas and edge cases that surfaced during the interview — specific situations where the framework's rules would give the wrong answer without additional context. These are the cases where a title looked like a good fit but wasn't when the user dug in, where a rule that works for one company size breaks at another, or where a signal that seems universal turned out to be segment-specific.
+
+Present these as concrete examples grounded in profiles reviewed during the interview, not abstract warnings.
+
+### 5. Open questions
 
 Things the framework doesn't resolve. Signals that came up but aren't solid enough to be criteria yet. Areas where the user was uncertain. Patterns that need more profile reviews to validate. Suggested next steps for testing.
 

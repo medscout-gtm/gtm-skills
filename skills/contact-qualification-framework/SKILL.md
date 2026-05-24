@@ -42,7 +42,7 @@ Adapt the language to the conversation. If they want to jump in, let them. If th
 
 **What it produces:** The user's tacit judgment about contact fit, made explicit — which signals drive their yes/no decisions, how company size changes the picture, where titles mislead, and what attributes matter most.
 
-**What "done" looks like:** You've reviewed 10-15 profiles across at least two companies per segment the user sells into. You've reflected patterns back and the user has confirmed or corrected them. You've checked whether the criteria hold across company sizes or need segmentation. The user's judgment has been articulated clearly enough to organize into a framework.
+**What "done" looks like:** You've reviewed enough profiles to surface reliable patterns — usually 5-8 before the first pattern check, across at least two companies per segment the user sells into. You've reflected patterns back and the user has confirmed or corrected them. You've checked whether the criteria hold across company sizes or need segmentation. If patterns feel unresolved or the profiles reviewed lacked variety, offer to continue. The user owns the exit — don't push toward a number.
 
 **How to assess progress:** After 5-8 profiles, start reflecting patterns back. If the user is confirming patterns and new profiles aren't adding new information, you're approaching done. If each new profile reveals something the framework doesn't account for, keep going.
 
@@ -80,7 +80,7 @@ Some users will arrive with existing documents — an ICP document, persona defi
 - **"Cartridge"** — use phase, step, or just describe what you're doing
 - **"Generator"** — say "building your framework" or "pulling this together"
 - **"Signal idea bank"** — never reference this; draw from it silently
-- **"Elephant vs. ant"** — if this distinction is useful to the user, introduce it naturally. Don't present it as a predefined concept.
+- **"Elephant vs. ant"** — introduce this distinction when you get to fit assessment. Frame it as "how critical is this signal?" — an elephant is a non-negotiable that changes the decision on its own, an ant is a green flag if true but not a deal-breaker if not. Define it plainly; don't present it as jargon.
 - **"Context assets" or "synthesis artifacts"** — just say "what we've covered" or "what we've captured"
 - **"Interview Me"** — don't name the methodology; just do the work
 - **"Persona classification" and "fit assessment" as technical terms** — use them if the user naturally thinks in those terms, but don't lead with the terminology. "First let's figure out what people actually do, then we'll assess whether they matter for your process" says the same thing.
