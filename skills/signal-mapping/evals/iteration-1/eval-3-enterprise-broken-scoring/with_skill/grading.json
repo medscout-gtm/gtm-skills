@@ -1,0 +1,79 @@
+{
+  "eval_id": 3,
+  "eval_name": "enterprise-broken-scoring",
+  "total_assertions": 10,
+  "passed": 10,
+  "failed": 0,
+  "assertions": [
+    {
+      "id": "orientation",
+      "type": "process",
+      "text": "Orients the user on what to expect -- positions this as building a signal map that could eventually inform a better scoring model, not as replacing scoring entirely",
+      "result": "pass",
+      "evidence": "Interviewer's first response explicitly orients: 'We're going to build a signal map for your business. Not a scoring model -- a clear picture of which signals matter for you, what each one tells you, and how important it is.' Then walks through the three steps (context, signal discovery, building the map). Positions the existing scoring model as 'useful input' rather than something to replace: 'The scoring model you built is useful input here. It tells us which signals your team has already identified and put weight behind -- we'll use that as a starting point.' The user's closing line confirms the positioning landed: 'The next scoring model -- if we build one -- should be built on this foundation, not the other way around.'"
+    },
+    {
+      "id": "fit-foundation-probing",
+      "type": "process",
+      "text": "Asks about account and person fit criteria before jumping into timing and engagement signals",
+      "result": "pass",
+      "evidence": "After the user describes their business, the Interviewer explicitly asks about fit before signals: 'Before we get into the signals themselves, I want to understand what makes a company a good fit for you.' This surfaces account fit (Fortune 1000, 10K+ employees, compliance-heavy verticals, legacy EDR). Then separately asks about person fit: 'What about on the person side -- what makes someone the right contact to pursue at one of these accounts?' This surfaces role/seniority, decision chain position, and community presence. Both fit dimensions are established before any signal discovery begins."
+    },
+    {
+      "id": "engages-with-existing-model",
+      "type": "process",
+      "text": "Asks about the current scoring model -- which signals are in it, what weights were assigned, what specifically reps don't trust -- rather than ignoring it and starting from scratch",
+      "result": "pass",
+      "evidence": "Interviewer explicitly asks: 'Let's talk about the scoring model you built. Walk me through what's in it -- which signals did you include, and how did you weight them?' After getting the model details (account-level scoring at 70 points, contact-level at 30 points), follows up with: 'When you say reps don't trust the scores -- can you be more specific about what they're seeing? Is it that high-scoring accounts go nowhere, or that deals close from low-scoring accounts, or both?' This surfaces the false positive problem and the logistics deal counterexample."
+    },
+    {
+      "id": "doesnt-dismiss-scoring",
+      "type": "calibration",
+      "text": "Doesn't lead with 'scores are bad' or trash the existing model -- acknowledges what it attempted and uses it as input for understanding which signals the team has already identified",
+      "result": "pass",
+      "evidence": "Interviewer frames the existing model positively in the orientation: 'The scoring model you built is useful input here. It tells us which signals your team has already identified and put weight behind -- we'll use that as a starting point rather than ignoring it. The conversation will naturally surface where the model lines up with reality and where it doesn't.' After hearing the model details, the Interviewer summarizes neutrally: 'the model is heavily weighted toward intent data from 6sense (35 points) and firmographic fit (35 points).' Even when the user says reps ignore scores, the Interviewer doesn't pile on -- instead asks a diagnostic question about what specifically reps see. Later, when the user says intent data isn't useless, the Interviewer engages constructively: 'Intent as confirmation vs. intent as trigger -- those are two completely different roles for the same data.'"
+    },
+    {
+      "id": "probes-rep-behavior",
+      "type": "calibration",
+      "text": "Asks which signals reps actually act on regardless of the score -- the gap between what the model says matters and what reps trust is diagnostic",
+      "result": "pass",
+      "evidence": "Interviewer explicitly names this as the diagnostic question: 'I want to dig into that gap. You've got a model that says \"this is what matters\" and you've got reps who act on something different. Let's talk about what reps actually act on. When your top performers decide to prioritize an account or a contact, what's driving that decision? Not what the score says -- what actually makes them pick up the phone?' This surfaces the four signals reps trust (warm intros, breach announcements, compliance deadlines, leadership hiring) and the Interviewer later synthesizes the gap: 'Your scoring model is built primarily on firmographic fit and 6sense intent data... The model can't see the signals your best reps actually act on.'"
+    },
+    {
+      "id": "asks-for-sources",
+      "type": "process",
+      "text": "For each signal discussed, confirms the specific tool or data source rather than assuming",
+      "result": "pass",
+      "evidence": "The Interviewer consistently asks about sources for each signal: 'The warm intros -- where does that intelligence come from? Is that purely rep relationships, or do you have any systematic way to track community connections?' For breach announcements: 'What about the breach announcements? Where do reps pick those up?' For compliance deadlines: 'For compliance deadlines -- where does that information come from? Are reps tracking audit cycles, or is it more about knowing the regulatory calendar?' For leadership hiring: 'And the security leadership hiring -- where are reps seeing those job postings?' For champion departures (added in crystallization): 'Where does that data come from?' answered with LinkedIn Sales Nav. In the generator phase, each signal entry includes the confirmed source (e.g., 'Source: security news feeds (Krebs on Security, The Record), Google Alerts')."
+    },
+    {
+      "id": "surfaces-compound-signals",
+      "type": "calibration",
+      "text": "Explores whether combinations of signals are more predictive than individual ones -- compound signals built from observable events, not from a signal plus time passing",
+      "result": "pass",
+      "evidence": "Interviewer explicitly introduces compound signals: 'Let me bring in the compound signal idea. You mentioned that intent data is most useful when it confirms another signal. Are there other combinations where two signals together are more meaningful than either one alone?' This surfaces three compounds: new CISO + security hiring burst within 60 days, comparison page visit + active Outreach sequence, and breach + specific intent surge. The user adds a fourth: warm intro + legacy EDR presence. Interviewer validates the observable-event criterion: 'Those are good compound signals, and they share an important feature: every component is an observable event. New CISO is an event. Hiring activity is an event... None of them are just \"time passed.\"'"
+    },
+    {
+      "id": "doesnt-force-hierarchy",
+      "type": "calibration",
+      "text": "If the user identifies a group of signals that are roughly equivalent, accepts that and focuses on how the engagement approach differs rather than forcing a ranking",
+      "result": "pass",
+      "evidence": "When the user says compliance deadlines and leadership changes are 'second tier' compared to warm intros and breaches, the Interviewer pushes back against strict ranking: 'I actually want to resist forcing those into a strict hierarchy. It sounds like warm intros and breaches are immediate action triggers, and compliance deadlines and leadership changes are windows that shape timing. They're doing different jobs rather than being better or worse versions of the same thing. The right question might be less \"which is more important\" and more \"how does the engagement approach differ for each one.\"' User confirms: 'Ranking them against each other would be artificial... Different signals, different playbooks, different timelines.' Interviewer then presents them in the map as 'the core timing signals without forcing a strict ranking' and focuses on different engagement approaches for each."
+    },
+    {
+      "id": "fit-as-foundation-in-output",
+      "type": "structural",
+      "text": "Signal map structures fit as the foundation with timing/engagement layering on top, not four equal sections",
+      "result": "pass",
+      "evidence": "The generator phase explicitly builds hierarchically. Interviewer states: 'I'll start with the fit foundation and work up through timing and engagement.' Account fit signals are presented first as 'the foundation' with the note 'These determine whether a company is in your addressable market.' Person fit signals are presented as 'the other half of the foundation.' Then timing signals are introduced as a layer: 'Now the timing signals -- these layer on top of fit and tell you when to prioritize an account.' Supporting signals come last as context. The Interviewer also explicitly names the hierarchy in the crystallization: 'The hierarchy needs to be stark: fit is the foundation, timing signals drive action, supporting signals validate.' The user's firmographic signals are explicitly described as 'foundational context, not an action trigger.'"
+    },
+    {
+      "id": "crystallization-pass",
+      "type": "process",
+      "text": "Runs a crystallization pass that specifically probes whether the 'elephant' signals are genuinely action-driving or are artifacts of the old scoring model's assumptions",
+      "result": "pass",
+      "evidence": "The Interviewer runs a structured crystallization pass with five explicit questions. The critical elephant-testing question: 'Look at the signals we tagged as big action-drivers -- community referrals, breach announcements, compliance deadlines, leadership transitions. Are those really the ones that change your behavior on their own? Or is any of them more like a strong supporting signal that we promoted because it sounded good during the conversation?' This catches a real adjustment: the user acknowledges compliance deadlines 'might be a half-step below the other three' and that it triggers qualifying conversation rather than full pursuit. The Interviewer adjusts accordingly. The pass also surfaces that competitive comparison page visits and multi-threading are unvalidated hypotheses, catches a durability adjustment for leadership transitions (30-90 days initial contact vs. 3-6 months full window), and surfaces missing negative signals (champion departure/arrival). The framing 'promoted because it sounded good during the conversation' specifically targets conversational artifacts."
+    }
+  ]
+}

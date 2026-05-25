@@ -1,0 +1,79 @@
+{
+  "eval_id": 2,
+  "eval_name": "early-stage-founder",
+  "total_assertions": 10,
+  "passed": 10,
+  "failed": 0,
+  "assertions": [
+    {
+      "id": "orientation",
+      "type": "process",
+      "text": "Orients the user on what to expect, adapted to their context -- doesn't reference tools or data sources they clearly don't have",
+      "result": "pass",
+      "evidence": "Interviewer's first response lays out the three-step process in plain language: (1) understand the business and fit, (2) walk through signals 'even if you don't think of them as signals yet,' (3) organize into a signal map. No mention of intent data, enrichment tools, scoring models, or any tooling the user said they lack. The orientation explicitly says 'You don't need to have a list ready. We'll figure it out together,' which adapts to the user's minimal setup."
+    },
+    {
+      "id": "fit-foundation-probing",
+      "type": "process",
+      "text": "Asks what makes a company a good fit before jumping into signals -- draws out the user's implicit knowledge about fit since they haven't formalized it",
+      "result": "pass",
+      "evidence": "After learning the basics of the business, the Interviewer explicitly asks 'what makes a company a good fit for you?' and follows up with 'When you think about the deals that have gone well or the conversations that felt like a natural fit, what made those companies different?' The user even responds 'I haven't really written this down anywhere' -- confirming they hadn't formalized it. The Interviewer then probes deeper on sub-segment (banks vs insurance) and whether having an MRM team matters, drawing out three layers of fit criteria before ever mentioning signals."
+    },
+    {
+      "id": "meets-them-where-they-are",
+      "type": "calibration",
+      "text": "Doesn't make the user feel behind for having minimal tooling -- frames what they do have (demo form, website, HubSpot, manual observations) as a legitimate starting point",
+      "result": "pass",
+      "evidence": "In the opening, the Interviewer says: 'The fact that you're thinking about this now -- before you have a bunch of tools stacked up -- is actually a good position to be in. It means you can figure out what matters first and then decide what to invest in later.' When the user describes their informal LinkedIn monitoring and Google alerts, the Interviewer responds: 'Those are all real signals, even if they feel scrappy.' When discussing the demo form: 'That's actually a high-quality signal... For a company your size, that form is doing a lot of work.' No language suggesting the user is behind or needs to catch up."
+    },
+    {
+      "id": "focuses-on-accessible-signals",
+      "type": "calibration",
+      "text": "Focuses signal discovery on signals the user can actually access today (form fills, website visits, LinkedIn research, industry news, regulatory changes) rather than signals that require tools they don't have",
+      "result": "pass",
+      "evidence": "The entire signal discovery phase focuses on: demo form submissions (HubSpot), LinkedIn monitoring for job changes, Google alerts for regulatory news, earnings call transcripts (publicly available), job postings (LinkedIn/career pages), conference conversations, and public enforcement actions (OCC/Fed). The Interviewer never suggests the user needs to buy tools to access these signals. Tools are only mentioned in the 'signals wanted but not yet available' section at the end, clearly separated from the actionable map. Website visitor ID is framed as a 'gap worth documenting' and a future investment, not a current requirement."
+    },
+    {
+      "id": "asks-for-sources",
+      "type": "process",
+      "text": "For each signal discussed, confirms how the user would actually find or monitor it given their current setup",
+      "result": "pass",
+      "evidence": "Multiple source confirmation exchanges: Demo form -- 'What information does the form collect?' LinkedIn monitoring -- 'How are you monitoring that today? Is it just your regular feed, or are you doing anything more structured?' Regulatory news -- 'When a new regulation or enforcement action hits, how do you use that?' Enforcement actions -- 'Is that something you're tracking at all?' (user confirms they're not). Pre-outreach research -- 'When you do your outreach, do you ever research the company beforehand?' In the signal map itself, every signal includes a Source field with the user's confirmed method (e.g., 'Source: LinkedIn alerts, your daily LinkedIn monitoring' and 'Source: OCC and Fed published enforcement actions -- you're not monitoring these systematically yet')."
+    },
+    {
+      "id": "surfaces-manual-signals",
+      "type": "calibration",
+      "text": "Explores signals the user picks up through their own outreach and research -- patterns they've noticed, things they've learned from conversations -- rather than only discussing tool-generated data",
+      "result": "pass",
+      "evidence": "The Interviewer explicitly asks: 'when you have conversations with prospects, even ones that don't close, do you pick up information that shapes who you go after next?' This surfaces the exam cycle timing signal and the core system migration negative signal -- both learned from prospect conversations. The Interviewer also draws out the conference signal by asking about quality of questions at the booth. Additionally, the pre-outreach research discussion surfaces earnings call mentions and job posting analysis -- all manual, human-driven intelligence. The Interviewer frames these positively: 'Both of those are really valuable. The exam cycle timing is something specific to your market that most signal mapping conversations wouldn't surface.'"
+    },
+    {
+      "id": "regulatory-relevance",
+      "type": "calibration",
+      "text": "For a compliance tool sold to financial services, probes for regulatory and industry signals (new regulations, enforcement actions, audit cycles) that would be especially relevant to this market",
+      "result": "pass",
+      "evidence": "The Interviewer probes multiple regulatory dimensions: (1) Follows up on the user's Google alerts for regulatory news and asks how they use it. (2) Specifically raises enforcement actions and consent orders: 'regulatory changes, enforcement actions, and consent orders -- those are public. When a bank gets an MRA or a consent order related to model risk, that's about as strong a buying signal as you can get.' (3) Points the user to specific sources: 'The OCC and Fed publish enforcement actions. They're public record.' (4) The user's mention of exam cycles is recognized and developed: 'The exam cycle timing is something specific to your market.' (5) Post-regulatory-announcement spikes are captured as a distinct timing signal. (6) Exam schedules are added to signals-wanted. This is clearly tailored to the regulatory compliance market, not generic B2B signal discussion."
+    },
+    {
+      "id": "importance-plain-language",
+      "type": "calibration",
+      "text": "Introduces importance weighting in plain language appropriate for a founder who hasn't done this before",
+      "result": "pass",
+      "evidence": "In the synthesis before the generator phase, the Interviewer introduces weighting naturally: 'The signals that seem to move the needle most for you are: demo form fills (obvious), new compliance/risk leadership at target companies... Everything else -- job postings, conference interactions, tech stack signals -- adds useful context but probably wouldn't change what you do on its own.' No jargon like 'elephant/ant' is used with the user. In the timing layer, the Interviewer labels signals plainly: 'This is an elephant -- it changes what you do on its own' and 'Strong ant -- useful context, but probably wouldn't trigger outreach on its own.' The crystallization pass asks: 'Are those really the ones that change your behavior on their own? Or are any of them more like strong ants -- useful context that still needs something else alongside it?' The language is concrete and behavioral ('changes what you do') rather than abstract."
+    },
+    {
+      "id": "fit-as-foundation-in-output",
+      "type": "structural",
+      "text": "Signal map structures fit as the foundation with timing and engagement layering on top",
+      "result": "pass",
+      "evidence": "The generator output explicitly structures the map hierarchically: Account fit signals are presented first as 'the foundation,' with the framing 'these are your fit signals. They determine whether a company or person is even worth pursuing. Everything else layers on top.' Person fit follows as additional foundation. Timing signals are introduced next as a 'layer': 'these are the signals that tell you when to prioritize a company that already fits.' Engagement signals come last: 'these signals shape how you approach, not whether you approach.' The user's closing reaction confirms the structure registered: 'having it structured like this -- fit first, then timing, then engagement -- makes it clear how the pieces connect.'"
+    },
+    {
+      "id": "crystallization-pass",
+      "type": "process",
+      "text": "Runs a crystallization pass before finalizing, asking where the map might give wrong answers",
+      "result": "pass",
+      "evidence": "After all signal categories are presented and the user has reacted, the Interviewer explicitly runs a structured validation pass with five questions: (1) 'Which signals are you least confident about? Where are we guessing about importance because you haven't actually tested it?' -- surfaces that enforcement actions and hiring signals are hypotheses. (2) 'Look at the elephant signals... Are those really the ones that change your behavior on their own?' -- leads user to downgrade enforcement actions from elephant to strong ant/hypothesis. (3) 'For the time-sensitive signals... does the durability feel right?' -- gets specific durability estimates (3-6 months for leadership, 6 months for regulation). (4) 'If you handed this map to someone else doing outreach... what would confuse them or lead them in the wrong direction?' -- surfaces the GRC nuance, MRM champion pathway, and exam cycle knowledge gaps. The pass produces material changes to the map (enforcement action downgraded, durability estimates added, context notes flagged)."
+    }
+  ]
+}

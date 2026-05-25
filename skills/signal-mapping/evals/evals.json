@@ -1,0 +1,179 @@
+{
+  "skill_name": "signal-mapping",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a signal map. We sell project management software to mid-market companies, 100-1000 employees. We've got HubSpot, Google Analytics, and we recently started paying for Bombora intent data. I'm running LinkedIn ads too. I have a decent sense of our ICP but I've never really organized which signals matter vs which ones are noise. There's a lot of data and I'm not sure what to pay attention to.",
+      "expected_output": "Skill orients the user, probes for fit criteria before jumping to signals, starts signal discovery with an open-ended question, floats concrete ideas from the bank when the user engages, asks where each signal's data comes from, introduces importance weighting in plain language, builds signal map with fit as foundation and timing/engagement layered on top, runs crystallization pass.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "orientation",
+          "text": "Skill orients the user on what to expect -- describes the process ahead (context, walking through signals, building the map) and sets expectations that this is not a scoring model",
+          "type": "process"
+        },
+        {
+          "id": "fit-foundation-probing",
+          "text": "Before jumping into signal discovery, asks the user what makes a company a good fit and what makes a person worth reaching out to -- establishes the fit foundation that other signals layer on top of",
+          "type": "process"
+        },
+        {
+          "id": "open-ended-start",
+          "text": "Starts signal discovery with a broad, open-ended question ('What signals are you tracking right now?') rather than imposing a source or category framework",
+          "type": "process"
+        },
+        {
+          "id": "floats-concrete-ideas",
+          "text": "When the user engages with a signal area, floats two or three specific ideas from the bank to prompt deeper thinking rather than leaving the user to brainstorm alone",
+          "type": "process"
+        },
+        {
+          "id": "asks-for-sources",
+          "text": "When the user mentions a signal they track, asks where the data actually comes from (which tool, which workflow) rather than assuming the source",
+          "type": "process"
+        },
+        {
+          "id": "first-party-edge",
+          "text": "If the user spends more time on third-party or intent data signals than first-party, circles back to explore what their own channels (website, ads, outreach responses) are telling them",
+          "type": "calibration"
+        },
+        {
+          "id": "importance-plain-language",
+          "text": "Introduces the importance distinction (signals that drive action on their own vs supporting context) in plain language with a concrete example, not as jargon ('elephant vs ant')",
+          "type": "calibration"
+        },
+        {
+          "id": "doesnt-force-hierarchy",
+          "text": "If the user says a group of signals (e.g., intent data topics) are roughly equivalent in importance, accepts that rather than forcing a ranking -- shifts to how the response differs for each",
+          "type": "calibration"
+        },
+        {
+          "id": "fit-as-foundation-in-output",
+          "text": "Signal map output is structured with fit signals as the foundation and timing/engagement signals layering on top, not four equal sections",
+          "type": "structural"
+        },
+        {
+          "id": "crystallization-pass",
+          "text": "Before finalizing the map, asks the user which signals they're least confident about, whether the importance weighting feels right, and where a rep would get confused",
+          "type": "process"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Hey, we're a 15-person startup selling an AI compliance tool to financial services companies. We just set up HubSpot a few months ago and our website is pretty basic -- a homepage, an about page, and a demo request form. We don't have any intent data or enrichment tools. I'm doing most of the outreach myself and I feel like I'm just guessing about who to prioritize. Can you help me figure out what signals I should be paying attention to?",
+      "expected_output": "Skill adapts to minimal tooling. Doesn't make the user feel behind. Probes for fit criteria. Focuses on signals they actually have access to (demo form fills, LinkedIn observations, news, industry events) rather than what they could buy. Surfaces first-party signals they might be undervaluing. Practical map that doesn't require enterprise tooling.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "orientation",
+          "text": "Orients the user on what to expect, adapted to their context -- doesn't reference tools or data sources they clearly don't have",
+          "type": "process"
+        },
+        {
+          "id": "fit-foundation-probing",
+          "text": "Asks what makes a company a good fit before jumping into signals -- draws out the user's implicit knowledge about fit since they haven't formalized it",
+          "type": "process"
+        },
+        {
+          "id": "meets-them-where-they-are",
+          "text": "Doesn't make the user feel behind for having minimal tooling -- frames what they do have (demo form, website, HubSpot, manual observations) as a legitimate starting point",
+          "type": "calibration"
+        },
+        {
+          "id": "focuses-on-accessible-signals",
+          "text": "Focuses signal discovery on signals the user can actually access today (form fills, website visits, LinkedIn research, industry news, regulatory changes) rather than signals that require tools they don't have",
+          "type": "calibration"
+        },
+        {
+          "id": "asks-for-sources",
+          "text": "For each signal discussed, confirms how the user would actually find or monitor it given their current setup",
+          "type": "process"
+        },
+        {
+          "id": "surfaces-manual-signals",
+          "text": "Explores signals the user picks up through their own outreach and research -- patterns they've noticed, things they've learned from conversations -- rather than only discussing tool-generated data",
+          "type": "calibration"
+        },
+        {
+          "id": "regulatory-relevance",
+          "text": "For a compliance tool sold to financial services, probes for regulatory and industry signals (new regulations, enforcement actions, audit cycles) that would be especially relevant to this market",
+          "type": "calibration"
+        },
+        {
+          "id": "importance-plain-language",
+          "text": "Introduces importance weighting in plain language appropriate for a founder who hasn't done this before",
+          "type": "calibration"
+        },
+        {
+          "id": "fit-as-foundation-in-output",
+          "text": "Signal map structures fit as the foundation with timing and engagement layering on top",
+          "type": "structural"
+        },
+        {
+          "id": "crystallization-pass",
+          "text": "Runs a crystallization pass before finalizing, asking where the map might give wrong answers",
+          "type": "process"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We need to rethink our signal strategy. We sell cybersecurity software to enterprise companies -- Fortune 500 mostly. We've got a full tech stack: Salesforce, 6sense, ZoomInfo, Outreach, LinkedIn Sales Nav. We built a lead scoring model about a year ago but nobody trusts the scores. Reps ignore them. We've got tons of data but I don't think we're using it well. I think we need to go back to basics and figure out which signals actually matter before we try to score anything.",
+      "expected_output": "Skill engages with existing materials without dismissing them. Probes for fit criteria. Explores what the scoring model got wrong (which signals were weighted but never acted on). Doesn't trash scoring as a concept -- acknowledges the model exists and helps identify which individual signals actually predict outcomes. Surfaces which signals reps DO act on vs which they ignore. Compound signals emerge naturally.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "orientation",
+          "text": "Orients the user on what to expect -- positions this as building a signal map that could eventually inform a better scoring model, not as replacing scoring entirely",
+          "type": "process"
+        },
+        {
+          "id": "fit-foundation-probing",
+          "text": "Asks about account and person fit criteria before jumping into timing and engagement signals",
+          "type": "process"
+        },
+        {
+          "id": "engages-with-existing-model",
+          "text": "Asks about the current scoring model -- which signals are in it, what weights were assigned, what specifically reps don't trust -- rather than ignoring it and starting from scratch",
+          "type": "process"
+        },
+        {
+          "id": "doesnt-dismiss-scoring",
+          "text": "Doesn't lead with 'scores are bad' or trash the existing model -- acknowledges what it attempted and uses it as input for understanding which signals the team has already identified",
+          "type": "calibration"
+        },
+        {
+          "id": "probes-rep-behavior",
+          "text": "Asks which signals reps actually act on regardless of the score -- the gap between what the model says matters and what reps trust is diagnostic",
+          "type": "calibration"
+        },
+        {
+          "id": "asks-for-sources",
+          "text": "For each signal discussed, confirms the specific tool or data source rather than assuming (e.g., 'Does the hiring data come from ZoomInfo enrichments or are reps checking LinkedIn manually?')",
+          "type": "process"
+        },
+        {
+          "id": "surfaces-compound-signals",
+          "text": "Explores whether combinations of signals are more predictive than individual ones -- compound signals built from observable events, not from a signal plus time passing",
+          "type": "calibration"
+        },
+        {
+          "id": "doesnt-force-hierarchy",
+          "text": "If the user identifies a group of signals that are roughly equivalent, accepts that and focuses on how the engagement approach differs rather than forcing a ranking",
+          "type": "calibration"
+        },
+        {
+          "id": "fit-as-foundation-in-output",
+          "text": "Signal map structures fit as the foundation with timing/engagement layering on top, not four equal sections",
+          "type": "structural"
+        },
+        {
+          "id": "crystallization-pass",
+          "text": "Runs a crystallization pass that specifically probes whether the 'elephant' signals are genuinely action-driving or just artifacts of the old scoring model's assumptions",
+          "type": "process"
+        }
+      ]
+    }
+  ]
+}
