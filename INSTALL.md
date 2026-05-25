@@ -2,19 +2,19 @@
 
 ## Claude Code
 
+Add the marketplace and install the plugin:
+
 ```bash
-git clone https://github.com/medscout-gtm/gtm-skills ~/gtm-skills
-ln -s ~/gtm-skills/skills/interview-me ~/.claude/skills/interview-me
-ln -s ~/gtm-skills/skills/crystallization ~/.claude/skills/crystallization
-ln -s ~/gtm-skills/skills/target-account-playbook ~/.claude/skills/target-account-playbook
+claude plugin marketplace add medscout-gtm/gtm-skills
+claude plugin install gtm-skills
 ```
 
-Updates: `cd ~/gtm-skills && git pull` — symlinks pick up changes automatically.
+To update later:
 
-## Other surfaces
+```bash
+claude plugin update gtm-skills
+```
 
-TBD. Pending decision on Claude Desktop / Claude Cowork support.
+## Codex
 
----
-
-**STATUS: Scaffold only. Verify commands against final repo layout before publishing.**
+Coming soon.
