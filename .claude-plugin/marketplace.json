@@ -1,0 +1,19 @@
+{
+  "name": "gtm-skills",
+  "owner": {
+    "name": "MedScout",
+    "email": "kai@medscout.io"
+  },
+  "metadata": {
+    "description": "Distributable Claude Code skills for B2B GTM work",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "gtm-skills",
+      "source": "./plugins/gtm-skills",
+      "description": "B2B GTM skills — account qualification, contact qualification, interview facilitation, and synthesis tools",
+      "version": "1.0.0"
+    }
+  ]
+}
