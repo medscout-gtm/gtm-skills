@@ -1,116 +1,80 @@
 # GTM Skills
 
-Distributable Claude Code skills for B2B GTM work, built by the MedScout GTM team.
+Your team already knows what good looks like — which accounts to pursue, which contacts matter, what signals mean someone's ready to buy. The problem is that knowledge lives in your best people's heads: never written down, never pressure-tested, never turned into something the rest of the team can use.
 
-## What's in here
+These skills pull that knowledge out through conversation, organize it into documented frameworks, and give you something you can actually hand to a rep, load into an agent, or build a workflow around.
 
-### General-purpose sharpening tools
-
-| Skill | What it does |
-|---|---|
-| **Interview Me** | Conversational thought partner that turns fuzzy thinking into sharp articulation. Voice-to-text brain dumps, half-formed ideas, implicit knowledge that hasn't been written down yet. |
-| **Crystallization** | Synthesis + friction cycles that sharpen rough thinking into documented clarity. The methodology behind Interview Me — also useful on its own for tightening an existing draft. |
-
-These are core parts of MedScout's internal systems, ported out. We reach for them anytime we need to sharpen our thinking — regardless of domain. Future skill packs will build on these same tools.
-
-### Domain-specific
-
-| Skill | What it does |
-|---|---|
-| **Target Account Playbook** | Takes your account qualification context and produces reusable playbook assets for ABX workflows — qualification rubric, signal maps, assessment timing. |
-
-## How they fit together
-
-```mermaid
-flowchart TD
-    subgraph gp["General-Purpose Sharpening Tools"]
-        IM["Interview Me"]
-        CX["Crystallization"]
-    end
-
-    TAP["Target Account Playbook"]
-
-    subgraph modes["How you use them together"]
-        S["Simplest: bring your context → V1 playbook"]
-        ST["Starter: interview → build context → playbook"]
-        L["Living: new info → sharpen → update playbook"]
-    end
-
-    gp -->|"develop context if you don't have it"| TAP
-    TAP --> modes
-```
-
-The Target Account Playbook takes your account qualification context — whatever you have documented about who you sell to, what makes a good fit, and how your team qualifies — and produces reusable playbook assets (rubric, signal maps, assessment timing).
-
-The question is: what if you don't have that context written down? That's what Interview Me and Crystallization are for. They help draw out the implicit knowledge your team already has but hasn't documented.
-
-**Three ways to use this, depending on where you are:**
-
-- **Simplest** — You already have context docs (positioning, ICP notes, prior qualification work). Feed them in, work with Claude, get your V1 playbook elements.
-- **Starter** — You don't have much written down. Go through the three interview stages to develop your context assets first, then generate the playbook from those.
-- **Living** — Your playbook is never final. When you learn something new — a deal surprises you, your market shifts, a rep surfaces a pattern — kick off a crystallization or interview session, then update your playbook assets with what you found.
-
-## What the Playbook produces
-
-One document: a qualification framework with written context and a rubric organized by **when** in your process each criterion becomes assessable. The framework distinguishes:
-
-- **Attributes** — traits that matter (e.g., "commercial maturity," "openness to innovation"). No single data point captures these.
-- **Signals** — observable indicators that help you assess an attribute. Multiple signals per attribute, each findable at different stages.
-- **Assessment timing** — where a signal becomes checkable (pre-engagement research vs. sales conversations vs. post-sale behavior).
-
-The output is meant to be used — by reps, by marketing, by ops — not filed and forgotten.
-
-## The philosophy
-
-**Most qualification frameworks live in someone's head.** The best reps and leaders have a sharp instinct for "good account" vs. "not a good account," but the reasoning is implicit — never written down, never shared, never pressure-tested against real data.
-
-This skill package pulls that implicit knowledge out through conversation, tests it against real customers, and turns it into something a team can use. The output is better than a generic framework because it's grounded in your company's specific examples — and better than a working doc because the process forces you to surface assumptions you didn't know you were making.
-
-## Web research
-
-The Target Account Playbook gets meaningfully richer when Claude can look up companies you're discussing during Stage 2 fit analysis — it can fill in context beyond what you recall in the moment. Web search is available on all Claude.ai plans (including Team and Enterprise), so this is usually on by default. If your organization has disabled web access, the skill still works — it just relies more heavily on what you bring to the conversation.
-
-## Before you start
-
-The Target Account Playbook moves faster and produces a sharper framework when you have a few things ready. None are required — the skill adapts to what you bring — but gathering these up front avoids interruptions mid-session.
-
-- **Your current ICP thinking, if any.** A positioning doc, a qualification rubric, notes from a prior exercise. Even a rough one-pager helps. If you don't have anything written, that's fine — the first stage is designed to draw it out through conversation.
-- **A shortlist of 3–6 real customers you can talk about.** Ideally a mix: two or three best-fit customers (long-tenured, expanded, strong use case) and two or three poor-fit customers (churned, never got traction, surprise losses). Named accounts you know well — not just logos.
-- **Optional but recommended: a rep transcript for Stage 3.** A voice recording of your best rep narrating how they qualify a couple of fresh accounts, thinking out loud. Skip if you don't have it yet — the skill will tell you how to set one up and you can come back to this stage later.
-- **Voice-to-text ready.** The interview mechanics assume brain-dump-style input. Typing works, but talking is faster and usually richer.
-
-## What to expect
-
-A full run through all three stages plus framework generation is roughly 90 minutes to 2 hours, spread across one sitting or multiple sessions. Rough shape:
-
-| Stage | What happens | Typical time |
-|---|---|---|
-| **Stage 1 — Company context** | You describe what you sell, who to, and your current thinking on fit. Short discovery. | 15–30 min |
-| **Stage 2 — Fit analysis** | Iterative rounds walking through good-fit and poor-fit customers. The longest stage — where most of the sharpening happens. | 45–75 min |
-| **Stage 3 — Rep walkthrough** (optional) | Upload the rep transcript; Claude unpacks it with you. Usually the shortest stage. | 15–30 min |
-| **Framework generation** | Claude produces your qualification framework — attributes, signals, assessment timing. You react and refine. | 15–30 min |
-
-The skill transitions you between stages — you don't need to track where you are. At any point you can stop, save the output, and resume later.
-
-**What you'll end up with**: one qualification framework document you can share with your team, plus the session journey behind it (useful context for the framework, and handy when you revisit later).
+Built by the [MedScout](https://medscout.io) team. Part of the [Stage 2 Capital GTM AI How To](https://stage2.capital) series.
 
 ## Install
 
-See [INSTALL.md](INSTALL.md). TL;DR: clone this repo, symlink the three skill directories into `~/.claude/skills/`, and Claude Code auto-discovers them.
+```bash
+claude plugin marketplace add medscout-gtm/gtm-skills
+claude plugin install gtm-skills
+```
+
+Codex support coming soon.
+
+## What's in here
+
+### Domain skills
+
+Each of these walks you through building a specific piece of your GTM playbook. They run as guided conversations — you talk through what you know, react to real examples, and end up with a documented framework.
+
+| Skill | What it does | Time |
+|---|---|---|
+| **Target Account Playbook** | Build a qualification framework for which accounts to pursue. Walk through good-fit and poor-fit customers, surface the attributes and signals that actually predict success, organize them by when they become assessable. | 90–120 min |
+| **Contact Qualification Framework** | Build qualification criteria for which people at target accounts are worth pursuing. Review real LinkedIn profiles, extract your judgment about what makes someone a fit, produce documented persona classification and fit assessment. | 60–90 min |
+
+### Underlying tools
+
+The domain skills are built on two general-purpose tools that you can also use directly.
+
+| Skill | What it does |
+|---|---|
+| **Interview Me** | Guided conversation that turns fuzzy thinking into sharp articulation. Handles voice-to-text brain dumps, half-formed ideas, implicit knowledge that hasn't been written down. |
+| **Crystallization** | Takes rough material and sharpens it through iterative rounds — reflect back what you heard, push on what's vague, tighten until it's precise. The methodology underneath Interview Me, also useful on its own for tightening a draft or plan. |
+
+## How it works
+
+Every domain skill follows the same pattern: an interview that extracts what you know, then a generation step that organizes it into a framework you react to and refine. At the end, a validation pass pressure-tests the result — where would this give you the wrong answer? Which criteria are you least confident in? What would trip up someone using this without your judgment behind it?
+
+You end up with one document you can share with your team, plus a record of how your thinking evolved during the session — useful context when you revisit the framework later.
+
+**Voice-to-text works best.** The interview mechanics are built for brain-dump-style input. Typing works, but dictation (Wispr Flow, Monologue, or the built-in mic) is faster and usually produces richer material.
+
+## Why this approach
+
+The tools you use to qualify accounts, find contacts, and prioritize outreach will change. The models will change. The specific workflow — whether it's Clay or Apollo or something that doesn't exist yet — will change.
+
+What doesn't change is your judgment about what matters for your business. Which accounts are actually a fit. Which people at those accounts would drive an evaluation. What signals tell you someone is ready to buy versus just browsing.
+
+That judgment is the input that makes everything else work. Without it, AI tools generate noise at scale. With it, they apply your best thinking consistently across every account and every contact.
+
+These skills exist to help you get that judgment out of your head and into a form you can use.
 
 ## Usage
 
-Open Claude Code (or any surface that supports custom skills) and describe what you want to do:
+Open Claude Code and describe what you want to do:
 
 - "Help me build a target account qualification framework"
+- "I need to figure out which contacts at my accounts are worth pursuing"
 - "I want to think through [topic] — interview me"
 - "I have a rough draft of [X], help me sharpen it"
 
-Claude picks the right skill based on the description. No slash commands required.
+Claude picks the right skill based on the description.
+
+## What to have ready
+
+The skills adapt to whatever you bring, but having a few things ready avoids interruptions:
+
+- **For account qualification:** Your current ICP thinking (even rough notes), plus 3–6 real customers you can talk about — a mix of best-fit and poor-fit.
+- **For contact qualification:** A contact search tool open on another screen (Sales Navigator, LinkedIn, ZoomInfo — whatever you have). Optionally, CRM data on contacts from closed deals.
+- **For either:** A voice-to-text tool if you prefer dictation over typing.
 
 ## Feedback
 
-Built by [MedScout](https://medscout.io). Issues and improvements welcome — open a PR or issue on this repo.
+Issues and improvements welcome — open a PR or issue on this repo.
 
 ## License
 
