@@ -1,0 +1,79 @@
+{
+  "eval_id": 1,
+  "eval_name": "prepared-midmarket",
+  "total_assertions": 10,
+  "passed": 10,
+  "failed": 0,
+  "assertions": [
+    {
+      "id": "orientation",
+      "type": "process",
+      "text": "Orients user on what to expect -- process ahead, not a scoring model",
+      "result": "pass",
+      "evidence": "Interviewer's first turn lays out the three phases (context/fit, signal discovery, building the map) and explicitly says 'One thing worth saying up front: this is not a scoring model. We're not going to assign points. The goal is a map with reasoning.' Clear orientation without jargon."
+    },
+    {
+      "id": "fit-foundation-probing",
+      "type": "process",
+      "text": "Asks what makes a good fit company/person before jumping to signals",
+      "result": "pass",
+      "evidence": "Interviewer asks 'what makes a company a good fit for you beyond company size' and follows with 'who's the right contact' before any signal discussion begins. Covers both account fit (project-heavy industries, 20+ projects, PMO presence) and person fit (VP Ops, PMO lead, cross-project ownership) before transitioning to signals."
+    },
+    {
+      "id": "open-ended-start",
+      "type": "process",
+      "text": "Starts discovery with broad question, not imposing a framework",
+      "result": "pass",
+      "evidence": "Signal discovery begins with 'What signals are you paying attention to right now? Could be things you're actively tracking, things you glance at occasionally, things you've set up alerts for -- whatever comes to mind.' No framework imposed, meets the user where they are."
+    },
+    {
+      "id": "floats-concrete-ideas",
+      "type": "process",
+      "text": "Floats 2-3 specific ideas from the bank when user engages an area",
+      "result": "pass",
+      "evidence": "Multiple instances: (1) When discussing email, Interviewer floats the idea of contacts who open everything as sustained interest and combines it with the PMO guide download. (2) When discussing third-party signals, floats leadership changes and job postings as distinct signal types. (3) When probing re-engagement, floats 'return visits after a quiet period' as a timing signal. Ideas drawn from the signal idea bank but surfaced naturally, 2-3 at a time."
+    },
+    {
+      "id": "asks-for-sources",
+      "type": "process",
+      "text": "Asks where signal data comes from rather than assuming",
+      "result": "pass",
+      "evidence": "Interviewer asks 'Is it connected to HubSpot, or is it just an aggregate number in analytics?' for pricing page visits. Asks 'are you tracking anything about what's happening at target accounts?' and then probes whether it's LinkedIn manual monitoring or tools. Asks about Bombora usage specifics. The generator output consistently attributes sources to what the user confirmed rather than assuming."
+    },
+    {
+      "id": "first-party-edge",
+      "type": "calibration",
+      "text": "Circles back to first-party if user over-indexes on third-party/intent",
+      "result": "pass",
+      "evidence": "After the user discusses Bombora intent data, Interviewer explicitly circles back: 'I want to circle back to something. You've got some interesting first-party data that we haven't fully explored. The things happening on your own website, in your email, on your forms -- those are signals your competitors can't see. Bombora data is shared across everyone who pays for it, but your pricing page visits, your PMO maturity assessment downloads, your email engagement patterns -- those are unique to you.' Directly addresses the first-party edge."
+    },
+    {
+      "id": "importance-plain-language",
+      "type": "calibration",
+      "text": "Introduces importance distinction in plain language, not jargon",
+      "result": "pass",
+      "evidence": "Interviewer introduces importance as: 'some of these signals are big enough to change what your team does on their own -- like if a great-fit account fills out a demo request, you act on that no matter what. Others are more like supporting evidence -- good context, but they wouldn't change someone's behavior by themselves.' No 'elephant/ant' jargon used with the user. Concrete example included. Then tests with: 'On its own, does that change what your team does?'"
+    },
+    {
+      "id": "doesnt-force-hierarchy",
+      "type": "calibration",
+      "text": "Accepts equivalent signals without forcing ranking",
+      "result": "pass",
+      "evidence": "When the user says Bombora surges don't drive action alone and treats content downloads, email engagement, and ad engagement as roughly equivalent supporting context, Interviewer accepts this: 'Bombora surges are also supporting context. Useful in combination, not enough to drive action alone.' Doesn't push for ranking among the supporting signals. In the engagement layer, email engagement, ad engagement, and content engagement are presented as peer-level supporting signals without forced ranking."
+    },
+    {
+      "id": "fit-as-foundation-in-output",
+      "type": "structural",
+      "text": "Output structures fit as foundation, timing/engagement on top",
+      "result": "pass",
+      "evidence": "The generator output presents account fit signals first ('the foundation'), then person fit signals ('the other half of the foundation'), then timing signals ('layer on top'), then engagement signals ('last layer'). Interviewer explicitly frames: 'I'll start with your fit foundation, then layer timing and engagement signals on top.' The hierarchy is clear: fit determines whether to pursue, timing determines when, engagement determines how."
+    },
+    {
+      "id": "crystallization-pass",
+      "type": "process",
+      "text": "Asks which signals least confident about, where rep would get confused",
+      "result": "pass",
+      "evidence": "Interviewer runs all five crystallization questions: (1) 'Which signals in this map are you least confident about?' -- user flags email and LinkedIn ad engagement. (2) 'Are those really the ones that change your team's behavior, or are any of them more like strong supporting context that we've inflated?' -- user reclassifies new leadership hires and agency referrals. (3) 'Does the durability feel right?' -- user adjusts Bombora durability. (4) 'If you handed this map to a rep tomorrow, what would confuse them?' -- user flags Bombora misinterpretation risk and tech stack ambiguity. (5) Missing signals check is covered in the earlier 'Is there anything we haven't talked about' question. Revisions are accepted and integrated."
+    }
+  ]
+}
